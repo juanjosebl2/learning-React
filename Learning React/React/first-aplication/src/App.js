@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './MyComponent';
+import { SecondComponent } from './SecondComponent';
+import { ThirdComponent } from './ThirdComponent';
+import { EventsComponent } from './EventsComponent';
+
+
 
 function App() {
+  const userInApp = {
+    id: 1,
+    firstName: 'John'
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +20,20 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Component */}
+        <div className="components">
+          <hr/>
+          <EventsComponent/>
+          <hr />
+          <ThirdComponent 
+            age={21}
+            user={userInApp}
+          />
+          <hr />
+          <MyComponent />
+          <hr />
+          <SecondComponent />
+        </div>
       </header>
     </div>
   );
