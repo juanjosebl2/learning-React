@@ -8,6 +8,7 @@ import { Services } from '../components/Services';
 import { HeaderNav } from '../components/layout/HeaderNav';
 import { Footer } from '../components/layout/Footer';
 import { Error } from '../components/Error';
+import { Proyect } from '../components/Proyect';
 
 export const Rutes = () => {
   return (
@@ -25,6 +26,7 @@ export const Rutes = () => {
               <Route path="/contact" element={<Contact/>} />
               <Route path="/cv" element={<CV/>} />
               <Route path="/services" element={<Services/>} />
+              <Route path='/proyect/:id' element={<Proyect/>} />
               <Route path='*' element={<Error/>} />
 
           </Routes>
